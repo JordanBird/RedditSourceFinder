@@ -19,7 +19,7 @@
 		"48": "icon48.png",
 		"128": "icon128.png" },
 	"content_scripts": [{
-		"matches": ["*://reddit.com/*"],
+		"matches": ["*://www.reddit.com/*"],
 		"all_frames" : true,
 		"js":      ["jquery.min.js", "main.js"],
 		"css": ["redditSourceFinderOverride.css"]
@@ -29,5 +29,8 @@
 		"activeTab",
 		"tabs",
 		"webNavigation"
-   ]
+   ],
+	"web_accessible_resources": [
+		"sauce.png"
+	]
 }
