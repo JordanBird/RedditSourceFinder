@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="options.js"></script>
+		<title>Reddit Source Finder Options</title>
+		
+		<style>
+			body
+			{
+				margin: 0px;
+				padding: 0px;
+				color: white;
+				font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+
+			h2
+			{
+				color: #ed1c24;
+				display: inline-block;
+			}
+			
+			label
+			{
+				color: #333333;
+				display: block;
+			}
+			
+			a
+			{
+				color: white;
+			}
+			
+			#creditAndInfo
+			{
+				background-color: rgba(0, 0, 0, 0.6);
+				
+				position: fixed;
+				
+				height: 100%;
+				bottom: 0px;
+				top: 0px;
+				left: 0px;
+				
+				z-index: 9999;
+				
+				-webkit-border-end: 1px solid black;
+			}
+			
+			#madeBy
+			{
+				position: fixed;
+				width: 200px;
+				height: 25px;
+				bottom: 0px;
+				
+				padding: 5px;
+			}
+
+			#wrapper
+			{
+				background-color: white;
+				
+				position: fixed;
+				
+				width: 100%;
+				height: 100%;
+				bottom: 0px;
+				top: 0px;
+			}
+			
+			#container
+			{
+				/* Trakt red: #ed1c24 */
+				background-color: white;
+				height: 100%;
+				width: calc(100% - 210px);
+				position: fixed;
+				left: 200px;
+				padding-left: 10px;
+				
+				overflow: auto;
+			}
+			
+			#header
+			{
+				padding-top: 10px;
+				width: 200px;
+				height: 225px;
+				
+				background-color: rgba(0, 0, 0, 0.6);
+				
+				text-align: center;
+			}
+			
+			#status
+			{
+				color: #ed1c24;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="container">
+				</div>
+				<div id="creditAndInfo">
+					<div id="header">
+						<img src="icon128.png">
+						<h1> Reddit Source Finder </h1>
+					</div>
+					
+					<div id="madeBy">
+						<p> Created by <a href="http://www.jordanbird.co.uk">Jordan Bird</a></p>
+					</div>
+				</div>
+
+				<div id="status"></div>
+				<button id="save">Save</button>
+			</div>
+		</div>
+	</body>
+</html>

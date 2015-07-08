@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	
+	"name": "Reddit Source Finder",
+	"description": "This extension will try to find the source of a post if present and display it at the top of the post.",
+	"version": "1.0",
+	
+	"author": "Jordan Bird",
+	
+	"options_page": "options.html",
+	"browser_action": {
+	"default_popup": "popup.html",
+	"default_title": "Reddit Source Finder"
+	},
+	"icons": {
+		"16": "icon16.png",
+		"19": "icon19.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png" },
+	"content_scripts": [{
+		"matches": ["*://reddit.com/*"],
+		"all_frames" : true,
+		"js":      ["jquery.min.js", "main.js"],
+		"css": ["redditSourceFinderOverride.css"]
+   }],
+	"permissions": [
+		"storage",
+		"activeTab",
+		"tabs",
+		"webNavigation"
+   ]
+}
